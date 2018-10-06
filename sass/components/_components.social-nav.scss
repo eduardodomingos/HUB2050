@@ -1,0 +1,19 @@
+.social-nav {
+    display: flex;
+    justify-content: center;
+    .menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    .menu-item a{
+        display: inline-block;
+        padding: $unit-tiny $unit-small;
+        @include attention() {
+            opacity: .8;
+        }
+    }
+
+}

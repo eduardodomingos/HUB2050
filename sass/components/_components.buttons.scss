@@ -1,0 +1,8 @@
+button {
+    font-family: $font-ui;
+    cursor: pointer;
+    font-weight: 300;
+    @include attention() {
+        outline: none;
+    }
+}
