@@ -15,7 +15,7 @@
     .menu-toggle {
         position: absolute;
         top: 50%;
-        left: $unit;
+        left: 15px;
         transform: translateY(-50%);
         z-index: 1;
         border: 0;
@@ -98,7 +98,7 @@
     .site-description {
         position: absolute;
         top: 50%;
-        right: $unit;
+        right: 15px;
         transform: translateY(-50%);
         z-index: 1;
         display: none;

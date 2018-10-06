@@ -15,4 +15,6 @@ if ($hero_text) : ?>
 <p class="hero-text"><?php echo $hero_text; ?></p>
 <?php endif; ?>
 </div><!-- .container-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 20.3"><path fill="#57ffcf" d="M0 19L1440 0v20.3H0z"/></svg>
 </div><!-- .hero -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1439 75.5"><path fill="#57ffcf" d="M0 0h1439v2.9L0 75.5z"/></svg>

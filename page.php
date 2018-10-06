@@ -18,7 +18,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<?php get_template_part( 'template-parts/content', 'hero' ); ?>
+			<?php get_template_part( 'template-parts/content', 'hero-page' ); ?>
 
 			<?php
 				if ( have_posts() ) :?>

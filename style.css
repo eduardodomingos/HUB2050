@@ -686,6 +686,7 @@ h6 {
  *    using `display: block;`.
  */
 svg {
+	display: block;
 	vertical-align: middle;
 	/* [1] */
 }
@@ -1712,7 +1713,7 @@ table {
 .site-header .menu-toggle {
 	position: absolute;
 	top: 50%;
-	left: 24px;
+	left: 15px;
 	transform: translateY(-50%);
 	z-index: 1;
 	border: 0;
@@ -1798,7 +1799,7 @@ table {
 .site-header .site-description {
 	position: absolute;
 	top: 50%;
-	right: 24px;
+	right: 15px;
 	transform: translateY(-50%);
 	z-index: 1;
 	display: none;
