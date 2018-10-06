@@ -7,7 +7,7 @@
 
 .site-header {
     height: $site-header-height;
-    > .o-wrapper {
+    > .container {
         position: relative;
         height: 100%;
     }
@@ -213,18 +213,19 @@
 
 
 
-
-.site-footer {
+.site-footer,
+.site-micro-footer {
     color: #fff;
+    text-align: center;
     a {
         font-weight: 700;
         color: inherit;
         text-decoration: none;
     }
+
     .legal {
         @include font-size(13px);
         margin-bottom: 0;
-        text-align: center;
         > * + * {
             &:before {
                 content: ' / ';
@@ -236,16 +237,25 @@
             }
         }
     }
+}
 
-    .home & {
-        position: absolute;
-        bottom: $unit;
-        left: 0;
-        right: 0;
+.site-footer {
+    .site-footer-wrapper {
+        padding: $unit 0;
+        background: $color-blue;
     }
 
-    // .page-template-default & {
-    //     background: $color-blue;
-    // }
+    .logo {
+        width: 150px;
+        display: inline-block;
+        fill: $color-highlight;
+    }
+}
 
+.site-micro-footer {
+    position: absolute;
+    bottom: $unit;
+    left: 0;
+    right: 0;
+    background: none;
 }

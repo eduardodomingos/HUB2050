@@ -12,18 +12,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php if( get_field('page_subtitle') ): ?>
+			<h2 class="entry-subtitle"><?php echo get_field('page_subtitle'); ?></h2>
+		<?php endif;?>
 	</header><!-- .entry-header -->
-
-	<?php hub_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content();
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hub' ),
-			'after'  => '</div>',
-		) );
 		?>
 	</div><!-- .entry-content -->
 

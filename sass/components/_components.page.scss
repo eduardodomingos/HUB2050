@@ -1,0 +1,23 @@
+.page {
+    .hentry {
+        margin-top: $unit-large;
+    }
+    .entry-header {
+        text-align: center;
+        margin-bottom: $unit-large;
+    }
+
+    .entry-title {
+        text-transform: uppercase;
+        @include font-size(45px);
+        margin-bottom: 0;
+    }
+    .entry-subtitle {
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .entry-content {
+        font-family: $font-copy;
+    }
+}

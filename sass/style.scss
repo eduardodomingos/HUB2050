@@ -125,6 +125,7 @@ Text Domain: hub
 @import "../node_modules/inuitcss/elements/elements.headings";
 @import "elements/elements.type";
 @import "elements/elements.links";
+@import "elements/elements.svg";
 @import "../node_modules/inuitcss/elements/elements.images";
 @import "../node_modules/inuitcss/elements/elements.tables";
 
@@ -135,8 +136,8 @@ Text Domain: hub
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "../node_modules/inuitcss/objects/objects.wrapper";
-@import "../node_modules/inuitcss/objects/objects.layout";
+// @import "../node_modules/inuitcss/objects/objects.wrapper";
+// @import "../node_modules/inuitcss/objects/objects.layout";
 // @import "../node_modules/inuitcss/objects/objects.media";
 // @import "../node_modules/inuitcss/objects/objects.flag";
 // @import "../node_modules/inuitcss/objects/objects.list-bare";
@@ -147,6 +148,29 @@ Text Domain: hub
 // @import "../node_modules/inuitcss/objects/objects.crop";
 // @import "../node_modules/inuitcss/objects/objects.table";
 // @import "../node_modules/inuitcss/objects/objects.pack";
+@import "../node_modules/bootstrap/scss/mixins/breakpoints";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$enable-grid-classes: true;
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+@import "../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../node_modules/bootstrap/scss/mixins/grid";
+@import "../node_modules/bootstrap/scss/grid";
 
 
 
@@ -161,6 +185,7 @@ Text Domain: hub
 @import "components/components.icons";
 @import "components/components.buttons";
 @import "components/components.social-nav";
+@import "components/components.page";
 
 
 

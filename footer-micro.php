@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-micro-footer">
 		<?php if( has_nav_menu( 'social' ) ) { ?>
 		<nav class="social-nav">
 			<?php

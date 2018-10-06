@@ -20,6 +20,23 @@ get_header();
 
 			<?php get_template_part( 'template-parts/content', 'hero' ); ?>
 
+			<?php
+				if ( have_posts() ) :?>
+					<div class="container">
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
+
+						get_template_part( 'template-parts/content', get_post_type() );
+
+					endwhile;
+					?>
+					</div><!-- .container -->
+					<?php
+				endif;
+			?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
