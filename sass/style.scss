@@ -182,6 +182,8 @@ $grid-gutter-width:           60px;
 //
 // Build and include your project’s UI components here.
 // @import "components/example.components.buttons";
+@import "components/components.alignments";
+@import "components/components.captions";
 @import "components/components.slanted";
 @import "components/components.site";
 @import "components/components.hero";
