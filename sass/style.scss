@@ -126,7 +126,9 @@ Text Domain: hub
 @import "elements/elements.type";
 @import "elements/elements.links";
 @import "elements/elements.svg";
+$inuit-static-images: false;
 @import "../node_modules/inuitcss/elements/elements.images";
+@import "elements/elements.images";
 @import "../node_modules/inuitcss/elements/elements.tables";
 
 
@@ -188,6 +190,7 @@ $grid-gutter-width:           60px;
 @import "components/components.social-nav";
 @import "components/components.page";
 @import "components/components.contacts";
+@import "components/components.people";
 
 
 

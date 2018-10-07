@@ -1,0 +1,19 @@
+.people {
+    text-align: center;
+    .people-image {
+        margin-bottom: $unit-small;
+        img {
+            display: block;
+        }
+    }
+
+    .people-name {
+        color: $color-blue-text;
+        @include font-size(22px);
+        margin-bottom: 0;
+    }
+
+    .people-role {
+        font-style: italic;
+    }
+}

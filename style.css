@@ -718,13 +718,11 @@ img {
 	/* [3] */
 }
 
-/**
-   * If a `width` and/or `height` attribute has been explicitly defined, let’s
-   * not make the image fluid.
-   */
-img[width],
-img[height] {
-	max-width: none;
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
 }
 
 /* ==========================================================================
@@ -2226,6 +2224,30 @@ button:hover, button:active, button:focus {
 .contacts .contact-list > li + li:before {
 	content: '/';
 	padding: 0 10px;
+}
+
+.people {
+	text-align: center;
+}
+
+.people .people-image {
+	margin-bottom: 12px;
+}
+
+.people .people-image img {
+	display: block;
+}
+
+.people .people-name {
+	color: #1f3487;
+	font-size: 22px;
+	font-size: 1.375rem;
+	line-height: 1.36364;
+	margin-bottom: 0;
+}
+
+.people .people-role {
+	font-style: italic;
 }
 
 /* ==========================================================================
