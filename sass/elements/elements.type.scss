@@ -1,0 +1,7 @@
+@include headings() {
+    margin-bottom: $unit-tiny;
+}
+
+strong, b {
+    font-weight: 700;
+}

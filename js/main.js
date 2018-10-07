@@ -15,6 +15,14 @@
             $(this).blur();
             dom.$body.toggleClass('nav-open');
         });
+
+        // Scroll hero
+        $("#scroll").click(function(e) {
+            $(this).blur();
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(window).height()
+            }, 1000);
+        });
     
     
     });

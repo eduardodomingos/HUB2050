@@ -1,5 +1,6 @@
 .hero {
     color: $color-highlight;
+    
     > .container {
         width: 100vw;
         height: 100vh;
@@ -9,6 +10,84 @@
         @include mq($from: desktop) {
             justify-content: flex-end;
         }
+    }
+
+    #scroll {
+        color: $color-green;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -40px;
+        background: none;
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        z-index: 11;
+        border: 0;
+        font-style: italic;
+        transition: transform .4s cubic-bezier(0.5, 0, 0.1, 1);
+        @include attention() {
+            transform: translateY(5px);
+        }
+        span {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: $color-green;
+            left: 50%;
+            margin-left: -1px;
+        }
+        // bottom: 28px;
+        // font-weight: 500;
+        // left: 50%;
+        // margin-left: -30px;
+        // line-height: 28px;
+        // position: absolute;
+        // text-align: center;
+        // text-transform: uppercase;
+        // width: 60px;
+        // z-index: 2;
+        // padding: 0;
+        // padding-bottom: 48px;
+        // border: none;
+        // background: none;
+        // &:hover {
+        //     span {
+        //         transform: translateY(5px);
+        //     }
+
+        //     &:after {
+        //         transform:scaleY(1.2) translateY(5px);
+        //     }
+        // }
+        // span {
+        //     transition: transform .4s cubic-bezier(0.5, 0, 0.1, 1);
+        //     transform: translateY(0);
+        //     position: relative;
+        //     display: block;
+        // }
+        // &:after {
+        //     background: currentcolor;
+        //     content: "";
+        //     display: block;
+        //     height: 48px;
+        //     left: 50%;
+        //     margin-left: -1.5px;
+        //     pointer-events: none;
+        //     position: absolute;
+        //     transform: scaleY(1) translateY(0);
+        //     transform-origin: top;
+        //     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        //     width: 3px;
+        // }
     }
 }
 

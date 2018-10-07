@@ -1,0 +1,37 @@
+.is-top-slanted,
+.is-bottom-slanted {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    &:before {
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, 0);
+        min-width: 1280px;
+        height: 70px;
+        z-index: 10;
+        -webkit-backface-visibility: initial;
+        backface-visibility: initial;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.is-top-slanted {
+    &:before {
+        background-image: url(images/slant-top.svg);
+        content: "";
+        top: 0;
+    }
+}
+
+.is-bottom-slanted {
+    &:before {
+        content: "";
+        bottom: 0;
+        background-image: url(images/slant-bottom.svg);
+    }
+}

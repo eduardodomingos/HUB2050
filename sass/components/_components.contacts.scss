@@ -1,0 +1,50 @@
+.contacts {
+    color: $color-highlight;
+    font-style: italic;
+    
+    > .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact-title {
+        font-weight: 300;
+        @include font-size(26px);
+    }
+
+    .contact-address {
+        font-weight: 400;
+        @include font-size(28px);
+        @include mq($from: desktop) {
+            @include font-size(33px);
+        }
+    }
+
+    .contact-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        @include font-size(18px);
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        > li + li {
+            &:before {
+                content: '/' ;
+                padding: 0 10px;
+            }
+        }
+    }
+}

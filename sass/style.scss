@@ -167,7 +167,7 @@ $container-max-widths: (
 
 $enable-grid-classes: true;
 $grid-columns:                12;
-$grid-gutter-width:           30px;
+$grid-gutter-width:           60px;
 @import "../node_modules/bootstrap/scss/mixins/grid-framework";
 @import "../node_modules/bootstrap/scss/mixins/grid";
 @import "../node_modules/bootstrap/scss/grid";
@@ -180,12 +180,14 @@ $grid-gutter-width:           30px;
 //
 // Build and include your project’s UI components here.
 // @import "components/example.components.buttons";
+@import "components/components.slanted";
 @import "components/components.site";
 @import "components/components.hero";
 @import "components/components.icons";
 @import "components/components.buttons";
 @import "components/components.social-nav";
 @import "components/components.page";
+@import "components/components.contacts";
 
 
 
