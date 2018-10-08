@@ -1788,7 +1788,7 @@ table {
 }
 
 .page-template-page-what .process.is-top-slanted:before {
-	background-image: url(images/process-top.svg);
+	background-image: url(images/slant-top-inverted.svg);
 }
 
 .site {
@@ -2309,7 +2309,6 @@ button:hover, button:active, button:focus {
 }
 
 .process {
-	text-align: center;
 	background: #1f3487;
 	padding: 90px 0 30px;
 	margin-top: 48px;
@@ -2317,6 +2316,12 @@ button:hover, button:active, button:focus {
 
 .process figure {
 	margin-bottom: 0;
+}
+
+.process figure img {
+	display: block;
+	max-width: 400px;
+	margin: 0 auto;
 }
 
 /* ==========================================================================

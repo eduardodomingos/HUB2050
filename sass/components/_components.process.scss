@@ -1,9 +1,13 @@
 .process {
-    text-align: center;
     background: $color-blue-dark;
     padding: 90px 0 30px;
     margin-top: $unit-large;
     figure {
         margin-bottom: 0;
+        img {
+            display: block;
+            max-width: 400px;
+            margin: 0 auto;
+        }
     }
 }
