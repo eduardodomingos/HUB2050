@@ -176,3 +176,13 @@ require get_template_directory() . '/inc/icon-functions.php';
  */
 require get_template_directory() . '/inc/walker-footer-menu.php';
 
+
+/**
+ * Create an options page,
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+

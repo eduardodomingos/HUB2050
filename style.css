@@ -1778,6 +1778,19 @@ table {
 	background-image: url(images/slant-bottom.svg);
 }
 
+.is-top-slanted--green:before {
+	background-image: url(images/slant-top-green.svg);
+	height: 120px;
+}
+
+.page-template-page-what footer.is-top-slanted:before {
+	background-image: url(images/slant-top-blue.svg);
+}
+
+.page-template-page-what .process.is-top-slanted:before {
+	background-image: url(images/process-top.svg);
+}
+
 .site {
 	position: relative;
 }
@@ -1886,8 +1899,13 @@ table {
 	transform: translateY(-50%);
 	z-index: 1;
 	display: none;
-	margin-bottom: 0;
 	color: #fff;
+	line-height: 1.3;
+}
+
+.site-header .site-description p {
+	margin-bottom: 0;
+	text-align: right;
 }
 
 .nav-open .site-header .site-description {
@@ -2104,11 +2122,11 @@ table {
 	content: "";
 	position: absolute;
 	top: 0;
-	width: 2px;
+	width: 4px;
 	height: 100%;
 	background: #57fed0;
 	left: 50%;
-	margin-left: -1px;
+	margin-left: -2px;
 }
 
 .hero-text {
@@ -2175,7 +2193,7 @@ button:hover, button:active, button:focus {
 }
 
 .page .hentry {
-	margin-top: 48px;
+	padding-top: 96px;
 }
 
 .page .entry-header {
@@ -2288,6 +2306,17 @@ button:hover, button:active, button:focus {
 
 .people .people-role {
 	font-style: italic;
+}
+
+.process {
+	text-align: center;
+	background: #1f3487;
+	padding: 90px 0 30px;
+	margin-top: 48px;
+}
+
+.process figure {
+	margin-bottom: 0;
 }
 
 /* ==========================================================================

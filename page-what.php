@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: What Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -36,35 +36,23 @@ get_header();
 					<?php
 				endif;
 			?>
-
-			<?php if(get_field('people')): ?>
+			
+			<?php 
+			$svg = get_field( 'svg' ); 
+			if($svg):
+				$svg_src = wp_get_attachment_image_src(  $svg, 'full' )[0];
+			?>
+			<div class="process is-top-slanted">
 				<div class="container">
-					<div class="row">
-						<?php while(has_sub_field('people')): ?>
-							
-							<div class="col-md-4">
-								<div class="people">
-									<figure class="people-image">
-										<?php 
-											$image = get_sub_field('people_photo');
-											$size = 'full';
-											if( $image ) {
-												echo wp_get_attachment_image( $image, $size );
-											}
-										?>
-									</figure>
-									<h2 class="people-name"><?php the_sub_field('people_name');?></h2>
-									<p class="people-role"><?php the_sub_field('people_role'); ?></p>
-								</div>
-
-
-							</div>
-
-							<?php $counter++; if($counter % 3 === 0) :  echo '</div> <div class="row">'; endif; ?>
-						<?php endwhile; ?>
-					</div>
+					<figure>
+						<img src="<?php echo $svg_src; ?>" alt="">
+					</figure>
 				</div>
-			<?php endif; ?>
+			</div>
+				
+			<?php endif;?>
+
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

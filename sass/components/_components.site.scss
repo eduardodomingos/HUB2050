@@ -104,8 +104,13 @@
         transform: translateY(-50%);
         z-index: 1;
         display: none;
-        margin-bottom: 0;
         color: $color-highlight;
+        line-height: 1.3;
+
+        p {
+            margin-bottom: 0;
+            text-align: right;
+        }
 
         .nav-open & {
             color: $color-gray;

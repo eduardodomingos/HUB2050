@@ -35,3 +35,19 @@
         background-image: url(images/slant-bottom.svg);
     }
 }
+
+.is-top-slanted--green {
+    &:before {
+        background-image: url(images/slant-top-green.svg);
+        height: 120px;
+    }
+}
+
+
+.page-template-page-what footer.is-top-slanted:before {    
+    background-image: url(images/slant-top-blue.svg);
+}
+
+.page-template-page-what .process.is-top-slanted:before {
+    background-image: url(images/process-top.svg);
+}
