@@ -65,7 +65,7 @@
 					?>
 				</div><!-- .container-->
 			</div><!-- .main-navigation-wrapper -->
-			<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 101.1"><path fill="#57ffcf" d="M1 0h1439v3.2L1 100.6z"/></svg> -->
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 101.1"><path fill="#57ffcf" d="M0 0h1440v3.2L0 100.6z"/></svg>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
