@@ -17,7 +17,7 @@
 		<?php endif;?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content <?php if(get_field('mobile_text')): ?>has-mobile-text<?php endif; ?>">
 		<?php if(get_field('mobile_text')): ?>
 			<div class="container mobile-text">
 				<div class="row">

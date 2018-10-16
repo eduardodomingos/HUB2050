@@ -19,5 +19,16 @@
 
     .entry-content {
         font-family: $font-copy;
+
+        @include mq($until: desktop) {
+            &.has-mobile-text >*:not(.mobile-text) {
+                display: none;
+            }
+        }
+        @include mq($from: desktop) {
+            &.has-mobile-text >*.mobile-text {
+                display: none;
+            }
+        }
     }
 }
