@@ -18,6 +18,16 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php if(get_field('mobile_text')): ?>
+			<div class="container mobile-text">
+				<div class="row">
+					<div class="col">
+						<?php the_field('mobile_text'); ?>
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		<?php endif; ?>
+
 		<?php
 		the_content();
 		?>
