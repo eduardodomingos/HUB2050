@@ -40,28 +40,32 @@ get_header();
 			<?php if(get_field('people')): ?>
 				<div class="container">
 					<div class="row">
-						<?php while(has_sub_field('people')): ?>
-							
-							<div class="col-md-4">
-								<div class="people">
-									<figure class="people-image">
-										<?php 
-											$image = get_sub_field('people_photo');
-											$size = 'full';
-											if( $image ) {
-												echo wp_get_attachment_image( $image, $size );
-											}
-										?>
-									</figure>
-									<h2 class="people-name"><?php the_sub_field('people_name');?></h2>
-									<p class="people-role"><?php the_sub_field('people_role'); ?></p>
+						<div class="col-md-10 offset-md-1">
+							<div class="row">
+							<?php while(has_sub_field('people')): ?>
+								
+								<div class="col-md-4">
+									<div class="people">
+										<figure class="people-image">
+											<?php 
+												$image = get_sub_field('people_photo');
+												$size = 'full';
+												if( $image ) {
+													echo wp_get_attachment_image( $image, $size );
+												}
+											?>
+										</figure>
+										<h2 class="people-name"><?php the_sub_field('people_name');?></h2>
+										<p class="people-role"><?php the_sub_field('people_role'); ?></p>
+									</div>
+
+
 								</div>
 
-
+								<?php $counter++; if($counter % 3 === 0) :  echo '</div> <div class="row">'; endif; ?>
+							<?php endwhile; ?>
 							</div>
-
-							<?php $counter++; if($counter % 3 === 0) :  echo '</div> <div class="row">'; endif; ?>
-						<?php endwhile; ?>
+						</div>
 					</div>
 				</div>
 			<?php endif; ?>
