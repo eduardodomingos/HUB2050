@@ -719,6 +719,7 @@ img {
 }
 
 img {
+	width: 100%;
 	height: auto;
 	/* Make sure images are scaled correctly. */
 	max-width: 100%;
@@ -1809,7 +1810,7 @@ table {
 .site-header .menu-toggle {
 	position: absolute;
 	top: 50%;
-	left: 15px;
+	left: 30px;
 	transform: translateY(-50%);
 	z-index: 1;
 	border: 0;
@@ -1884,7 +1885,7 @@ table {
 }
 
 .site-header .logo {
-	width: 150px;
+	width: 90px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -1892,15 +1893,20 @@ table {
 	fill: #fff;
 }
 
+@media (min-width: 61.25em) {
+	.site-header .logo {
+		width: 130px;
+	}
+}
+
 .site-header .site-description {
 	position: absolute;
 	top: 50%;
-	right: 15px;
+	right: 30px;
 	transform: translateY(-50%);
 	z-index: 1;
-	display: none;
 	color: #fff;
-	line-height: 1.3;
+	line-height: 1;
 }
 
 .site-header .site-description p {
@@ -1912,18 +1918,13 @@ table {
 	color: #333;
 }
 
-@media (min-width: 61.25em) {
-	.site-header .site-description {
-		display: block;
-	}
-}
-
 .site-header .main-navigation {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	transition: all 300ms ease 0ms;
 	transform: translateY(-100%);
+	overflow: hidden;
 }
 
 .site-header .main-navigation .main-navigation-wrapper {
@@ -2057,7 +2058,7 @@ table {
 }
 
 .site-footer .logo {
-	width: 150px;
+	width: 100px;
 	display: inline-block;
 	fill: #fff;
 }
@@ -2134,7 +2135,7 @@ table {
 	font-size: 45px;
 	font-size: 2.8125rem;
 	line-height: 1.2;
-	text-align: center;
+	text-align: right;
 }
 
 @media (min-width: 61.25em) {
@@ -2143,7 +2144,6 @@ table {
 		font-size: 3.4375rem;
 		line-height: 1.2;
 		max-width: 45%;
-		text-align: right;
 	}
 }
 
@@ -2216,6 +2216,18 @@ button:hover, button:active, button:focus {
 
 .page .entry-content {
 	font-family: "Raleway", sans-serif;
+}
+
+@media (max-width: 61.24em) {
+	.page .entry-content.has-mobile-text > *:not(.mobile-text) {
+		display: none;
+	}
+}
+
+@media (min-width: 61.25em) {
+	.page .entry-content.has-mobile-text > *.mobile-text {
+		display: none;
+	}
 }
 
 .contacts {
