@@ -8,6 +8,7 @@
         var dom = {
             $body:	 					$('body'),
             $menuToggle:				$('.menu-toggle'),
+            $hero:                      $('.hero'),
         };
 
         // Toggle site-nav visibility
@@ -18,13 +19,21 @@
 
         // Scroll hero
         $("#scroll").click(function(e) {
+            e.stopPropagation();
             $(this).blur();
             $([document.documentElement, document.body]).animate({
                 scrollTop: $(window).height()
             }, 1000);
         });
-    
-    
+
+        // Open Nav when hero is clicked
+        dom.$hero.on('click',function(e){
+            e.stopPropagation();
+            if(!dom.$body.hasClass('nav-open')) {
+                dom.$body.toggleClass('nav-open');
+            }
+        });
+
     });
 
 }(jQuery));
