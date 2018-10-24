@@ -1907,6 +1907,7 @@ table {
 	z-index: 1;
 	color: #fff;
 	line-height: 1;
+	font-weight: 400;
 }
 
 .site-header .site-description p {
