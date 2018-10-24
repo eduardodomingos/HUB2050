@@ -2287,16 +2287,16 @@ button:hover, button:active, button:focus {
 
 .contacts .contact-address {
 	font-weight: 400;
-	font-size: 28px;
-	font-size: 1.75rem;
-	line-height: 1.28571;
+	font-size: 26px;
+	font-size: 1.625rem;
+	line-height: 1.38462;
 }
 
 @media (min-width: 61.25em) {
 	.contacts .contact-address {
-		font-size: 33px;
-		font-size: 2.0625rem;
-		line-height: 1.27273;
+		font-size: 31px;
+		font-size: 1.9375rem;
+		line-height: 1.35484;
 	}
 }
 
