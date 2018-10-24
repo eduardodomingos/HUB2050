@@ -255,6 +255,29 @@
         display: inline-block;
         fill: $color-highlight;
     }
+
+    #scroll-to-top {
+        color: $color-highlight;
+        position: absolute;
+        bottom: 24px;
+        right: 15px;
+        background: none;
+        width: 50px;
+        background: rgba(255,255,255,0.1);
+        height: 50px;
+        padding: 0;
+        border: 0;
+        font-size: 15px;
+        transition: transform .4s cubic-bezier(0.5, 0, 0.1, 1);
+        font-style: italic;
+        @include attention() {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        @include mq($from: desktop) {
+            right: 20px;
+        }
+    }
 }
 
 .site-micro-footer {

@@ -2064,6 +2064,33 @@ table {
 	fill: #fff;
 }
 
+.site-footer #scroll-to-top {
+	color: #fff;
+	position: absolute;
+	bottom: 24px;
+	right: 15px;
+	background: none;
+	width: 50px;
+	background: rgba(255, 255, 255, 0.1);
+	height: 50px;
+	padding: 0;
+	border: 0;
+	font-size: 15px;
+	transition: transform 0.4s cubic-bezier(0.5, 0, 0.1, 1);
+	font-style: italic;
+}
+
+.site-footer #scroll-to-top:hover, .site-footer #scroll-to-top:active, .site-footer #scroll-to-top:focus {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+}
+
+@media (min-width: 61.25em) {
+	.site-footer #scroll-to-top {
+		right: 20px;
+	}
+}
+
 .site-micro-footer {
 	position: absolute;
 	bottom: 24px;

@@ -34,6 +34,14 @@
             }
         });
 
+        /*
+         * Back to top.
+         */
+        $('#scroll-to-top').click(function(){
+            $(this).blur();
+            $('html, body').animate({scrollTop : 0}, 1000, function() {});
+        });
+
     });
 
 }(jQuery));
