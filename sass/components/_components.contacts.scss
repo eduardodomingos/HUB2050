@@ -21,9 +21,9 @@
 
     .contact-address {
         font-weight: 400;
-        @include font-size(28px);
+        @include font-size(26px);
         @include mq($from: desktop) {
-            @include font-size(33px);
+            @include font-size(31px);
         }
     }
 
