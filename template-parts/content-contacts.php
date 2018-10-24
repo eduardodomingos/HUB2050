@@ -1,4 +1,4 @@
-<div class="contacts"
+<div class="contacts  hero-contacts"
 <?php 
 $hero_image = get_field( 'contacts_background_image' );
 if ($hero_image) :
@@ -14,9 +14,13 @@ if ($hero_image) :
 		<?php
 
 		$contacts_address = get_field( 'contacts_address' );
+		$contacts_phone_label = get_field( 'contacts_phone_label' );
 		$contacts_phone = get_field( 'contacts_phone' );
+		$contacts_email_label = get_field( 'contacts_email_label' );
 		$contacts_email = get_field( 'contacts_email' );
+		$contacts_partnerships_label = get_field( 'contacts_partnerships_label' );
 		$contacts_partnerships = get_field( 'contacts_partnerships' );
+
 		if ($contacts_address) {
 			echo '<div class="contact-address">' . $contacts_address . '</div>';
 		}
@@ -26,13 +30,13 @@ if ($hero_image) :
 			<ul class="contact-list">
 				<?php
 				if($contacts_phone) {
-					echo '<li><a href="malito:'. str_replace(" ", "", $contacts_phone) .'">'. $contacts_phone  .'</a></li>';
+					echo '<li><a href="tel:'. str_replace(" ", "", $contacts_phone) .'">'. $contacts_phone_label  .'</a></li>';
 				}
 				if($contacts_email) {
-					echo '<li><a href="malito:'. $contacts_email .'">email</a></li>';
+					echo '<li><a target="_blank" href="mailto:'. $contacts_email .'">'. $contacts_email_label .'</a></li>';
 				}
 				if($contacts_partnerships) {
-					echo '<li><a href="malito:'. $contacts_partnerships .'">partnerships</a></li>';
+					echo '<li><a target="_blank" href="mailto:'. $contacts_partnerships .'">' . $contacts_partnerships_label . '</a></li>';
 				}
 				?>
 			</ul>
