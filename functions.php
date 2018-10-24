@@ -125,7 +125,11 @@ add_action( 'after_setup_theme', 'hub_content_width', 0 );
 function hub_scripts() {
 	wp_enqueue_style( 'hub-fonts', '//fonts.googleapis.com/css?family=Oswald:300,400,700|Raleway:400,400i,700' );
 
+	wp_enqueue_style( 'hub-animate', get_template_directory_uri() . '/css/animate.min.css' );
+
 	wp_enqueue_style( 'hub-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'hub-parallax', get_template_directory_uri() . '/js/parallax.min.js', array('jquery'), '20181005', true );
 
 	wp_enqueue_script( 'hub-scripts', get_template_directory_uri() . '/js/main.js', array('jquery'), '20181005', true );
 
