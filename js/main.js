@@ -8,7 +8,6 @@
         var dom = {
             $body:	 					$('body'),
             $menuToggle:				$('.menu-toggle'),
-            $hero:                      $('.hero'),
         };
 
         // Toggle site-nav visibility
@@ -27,7 +26,7 @@
         });
 
         // Open Nav when hero is clicked
-        dom.$hero.on('click',function(e){
+        $('.hero, .hero-contacts').on('click',function(e){
             e.stopPropagation();
             if(!dom.$body.hasClass('nav-open')) {
                 dom.$body.toggleClass('nav-open');
