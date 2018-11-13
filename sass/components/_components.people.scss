@@ -1,5 +1,6 @@
 .people {
     text-align: center;
+    margin-bottom: $unit;
     .people-image {
         margin-bottom: $unit-small;
         img {
@@ -15,5 +16,36 @@
 
     .people-role {
         font-style: italic;
+        margin-bottom: $unit-tiny;
+    }
+
+    .people-socials {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        > li + li {
+            margin-left: $unit-tiny;
+        }
+        a {
+            display: inline-block;
+            color: $color-black;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid $color-black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            @include attention() {
+                opacity: .6;
+            }
+            svg {
+                top: 0;
+                width: auto;
+            }
+        }
     }
 }

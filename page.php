@@ -57,6 +57,21 @@ get_header();
 										</figure>
 										<h2 class="people-name"><?php the_sub_field('people_name');?></h2>
 										<p class="people-role"><?php the_sub_field('people_role'); ?></p>
+										<?php if( have_rows('people_socials') ): ?>
+											<ul class="people-socials">
+												<?php while ( have_rows('people_socials') ) : the_row(); ?>
+													<?php
+													$social_icons = hub_social_links_icons();
+													$social_url = get_sub_field('people_social_url');
+													foreach ( $social_icons as $attr => $value ) {
+														if ( false !== strpos( $social_url, $attr ) ) {
+															echo '<li><a href="'. $social_url .'">'. hub_get_svg( array( 'icon' => esc_attr( $value ) ) ) .'</a></li>';
+														}
+													}
+													?>
+												<?php endwhile; ?>
+											</ul>
+										<?php endif; ?>
 									</div>
 
 

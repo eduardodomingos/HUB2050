@@ -2334,6 +2334,7 @@ button:hover, button:active, button:focus {
 
 .people {
 	text-align: center;
+	margin-bottom: 24px;
 }
 
 .people .people-image {
@@ -2354,6 +2355,46 @@ button:hover, button:active, button:focus {
 
 .people .people-role {
 	font-style: italic;
+	margin-bottom: 6px;
+}
+
+.people .people-socials {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.people .people-socials > li + li {
+	margin-left: 6px;
+}
+
+.people .people-socials a {
+	display: inline-block;
+	color: #000;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid #000;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	font-size: 13px;
+}
+
+.people .people-socials a:hover, .people .people-socials a:active, .people .people-socials a:focus {
+	opacity: .6;
+}
+
+.people .people-socials a svg {
+	top: 0;
+	width: auto;
 }
 
 .process {
