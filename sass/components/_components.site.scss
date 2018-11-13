@@ -109,6 +109,7 @@
         color: $color-highlight;
         line-height: 1;
         font-weight: 400;
+        font-style: italic;
 
         p {
             margin-bottom: 0;
@@ -259,7 +260,7 @@
     #scroll-to-top {
         color: $color-highlight;
         position: absolute;
-        bottom: 24px;
+        bottom: 85px;
         right: 15px;
         background: none;
         width: 50px;
@@ -273,6 +274,9 @@
         @include attention() {
             background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
+        }
+        @include mq($from: tablet) {
+            bottom: 24px;
         }
         @include mq($from: desktop) {
             right: 20px;
