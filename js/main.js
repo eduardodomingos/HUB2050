@@ -41,6 +41,11 @@
             $('html, body').animate({scrollTop : 0}, 1000, function() {});
         });
 
+         /*
+         * WOW.
+         */
+        new WOW().init();
+
     });
 
 }(jQuery));

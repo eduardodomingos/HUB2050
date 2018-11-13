@@ -131,6 +131,8 @@ function hub_scripts() {
 
 	wp_enqueue_script( 'hub-parallax', get_template_directory_uri() . '/js/parallax.min.js', array('jquery'), '20181005', true );
 
+	wp_enqueue_script( 'hub-wow', get_template_directory_uri() . '/js/wow.min.js', array(), '20181113', true );
+
 	wp_enqueue_script( 'hub-scripts', get_template_directory_uri() . '/js/main.js', array('jquery'), '20181005', true );
 
 	// wp_enqueue_script( 'hub-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

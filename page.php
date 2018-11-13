@@ -38,7 +38,7 @@ get_header();
 			?>
 
 			<?php if(get_field('people')): ?>
-				<div class="container">
+				<div class="container wow fadeInUp fast">
 					<div class="row">
 						<div class="col-md-10 offset-md-1">
 							<div class="row">
