@@ -1908,6 +1908,7 @@ table {
 	color: #fff;
 	line-height: 1;
 	font-weight: 400;
+	font-style: italic;
 }
 
 .site-header .site-description p {
@@ -2067,7 +2068,7 @@ table {
 .site-footer #scroll-to-top {
 	color: #fff;
 	position: absolute;
-	bottom: 24px;
+	bottom: 85px;
 	right: 15px;
 	background: none;
 	width: 50px;
@@ -2083,6 +2084,12 @@ table {
 .site-footer #scroll-to-top:hover, .site-footer #scroll-to-top:active, .site-footer #scroll-to-top:focus {
 	background: rgba(255, 255, 255, 0.2);
 	transform: translateY(-2px);
+}
+
+@media (min-width: 46.25em) {
+	.site-footer #scroll-to-top {
+		bottom: 24px;
+	}
 }
 
 @media (min-width: 61.25em) {
@@ -2164,6 +2171,7 @@ table {
 	font-size: 2.8125rem;
 	line-height: 1.2;
 	text-align: right;
+	font-style: italic;
 }
 
 @media (min-width: 61.25em) {
