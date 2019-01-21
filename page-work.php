@@ -20,22 +20,21 @@ get_header();
 
 			<?php get_template_part( 'template-parts/content', 'hero-page' ); ?>
 
-			<?php
-				if ( have_posts() ) :?>
-					
-					<?php
-					/* Start the Loop */
-					while ( have_posts() ) :
-						the_post();
+			<?php 
 
-						get_template_part( 'template-parts/content', get_post_type() );
+			$posts = get_field('works', 'option');
 
-					endwhile;
-					?>
-					
-					<?php
-				endif;
-			?>
+			if( $posts ): ?>
+				<ul>
+				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					<?php setup_postdata($post); ?>
+					<li>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</li>
+				<?php endforeach; ?>
+				</ul>
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
