@@ -190,5 +190,11 @@ if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
 	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Works Manager',
+		'menu_title'	=> 'Works Manager',
+		'parent_slug'	=> 'edit.php?post_type=work',
+	));
+
 }
 
