@@ -19,9 +19,9 @@ if ( ! function_exists( 'hub_posted_on' ) ) :
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
+			esc_html( get_the_date('d/m/Y') ),
 			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_modified_date('d/m/Y') )
 		);
 
 		$posted_on = sprintf(
@@ -144,5 +144,67 @@ if ( ! function_exists( 'hub_post_thumbnail' ) ) :
 
 		<?php
 		endif; // End is_singular().
+	}
+endif;
+
+
+if ( ! function_exists( 'hub_posted_in' ) ) :
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function hub_posted_in() {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'hub' ) );
+		if ( $categories_list ) {
+			/* translators: 1: list of categories. */
+			?>
+			<span class="cat-links meta"><?php echo $categories_list; ?></span>
+			<?php
+		}
+	}
+endif;
+
+
+if ( ! function_exists( 'hub_share_this' ) ) :
+	/**
+	 * Displays the share buttons.
+	 */
+	function hub_share_this() {
+		$url = urlencode(get_the_permalink());
+		$title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
+		?>
+		<div class="share-this">
+			<span class="label"><?php echo hub_get_svg( array( 'icon' => 'sharing' )); ?> Partilhe</span>
+			<ul class="social-links-list">
+				<li class="facebook">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" title="Share on Facebook">
+						<?php echo hub_get_svg( array( 'icon' => 'facebook' )); ?>
+						<span class="screen-reader-text">Share on Facebook</span>
+					</a>
+				</li>
+				<li class="linkedin">
+					<a href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url; ?>&amp;title=<?php echo $title; ?>&amp;via=hub2050" title="Share no Linkedin">
+						<?php echo hub_get_svg( array( 'icon' => 'linkedin' )); ?>
+						<span class="screen-reader-text">Share on Linkedin</span>
+					</a>
+				</li>
+				<li class="twitter">
+					<a href="https://twitter.com/intent/tweet?text=<?php echo $title; ?>&amp;url=<?php echo $url; ?>&amp;via=hub2050" title="Share on Twitter">
+						<?php echo hub_get_svg( array( 'icon' => 'twitter' )); ?>
+						<span class="screen-reader-text">Share on Twitter</span>
+					</a>
+				</li>
+				<li class="whatsapp">
+					<a href="whatsapp://send?text=<?php echo $title; ?>" title="Share on Whatsapp">
+						<?php echo hub_get_svg( array( 'icon' => 'whatsapp' )); ?>
+						<span class="screen-reader-text">Share on Whatsapp</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	<?php
 	}
 endif;

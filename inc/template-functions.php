@@ -48,3 +48,11 @@ function hub_nav_menu_objects($item_output, $item) {
 	return  '<span class="menu-item__description">' .get_field('nav_menu_item_description', $item). '</span>' . $item_output;
 }
 add_filter('walker_nav_menu_start_el', 'hub_nav_menu_objects', 15, 2);
+
+/**
+ * Customize ellipsis at end of excerpts.
+ */
+function hub_excerpt_more( $more ) {
+	return "…";
+}
+add_filter( 'excerpt_more', 'hub_excerpt_more' );
