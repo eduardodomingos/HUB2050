@@ -55,8 +55,8 @@ get_header();
 				<div class="partners">
 				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 					<?php setup_postdata($post); ?>
-						<?php if( get_field('url') ): ?>
-							<a href="<?php the_field('url'); ?>"><?php the_title(); ?></a>
+						<?php if( get_field('partner_link') ): ?>
+							<a href="<?php the_field('partner_link'); ?>" target="_blank"><?php the_title(); ?></a>
 						<?php else: ?>
 							<span><?php the_title(); ?></span>
 						<?php endif;?>
@@ -64,10 +64,6 @@ get_header();
 				</div>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
-
-			
-
-
 
 
 		</main><!-- #main -->

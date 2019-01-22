@@ -19,10 +19,10 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'single' );
+			get_template_part( 'template-parts/content', 'single-work' );
 
-			echo '<a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '">Back to Menu</a>';
-
+			echo '<a href="' . get_permalink( get_page_by_path( 'work' ) ) . '">Back to Menu</a>';
+			
 			// Previous/next post navigation.
 			$next_post = get_next_post();
 			$previous_post = get_previous_post();
@@ -32,8 +32,6 @@ get_header();
 				'prev_text' => '<span class="meta-nav" aria-hidden="true">- previous</span> ' .
 					'<span class="screen-reader-text">Previous article: %title</span>'
 			) );
-
-			get_search_form();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			// if ( comments_open() || get_comments_number() ) :
