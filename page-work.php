@@ -48,6 +48,28 @@ get_header();
 				</div>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
+
+			<?php 
+			$posts = get_field('partners', 'option');
+			if( $posts ): ?>
+				<div class="partners">
+				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+					<?php setup_postdata($post); ?>
+						<?php if( get_field('url') ): ?>
+							<a href="<?php the_field('url'); ?>"><?php the_title(); ?></a>
+						<?php else: ?>
+							<span><?php the_title(); ?></span>
+						<?php endif;?>
+				<?php endforeach; ?>
+				</div>
+				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			<?php endif; ?>
+
+			
+
+
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

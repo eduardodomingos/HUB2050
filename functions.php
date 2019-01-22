@@ -198,5 +198,11 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'edit.php?post_type=work',
 	));
 
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Partners Manager',
+		'menu_title'	=> 'Partners Manager',
+		'parent_slug'	=> 'edit.php?post_type=partners',
+	));
+
 }
 
