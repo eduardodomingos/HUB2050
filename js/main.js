@@ -46,7 +46,7 @@
          */
         new WOW().init();
 
-                /*
+        /*
          * Article share buttons.
          */
         if(dom.$body.hasClass('single-post')) {
@@ -72,6 +72,21 @@
                     window.open( $(this).attr('href'), 'LinkedIn','toolbar=0,status=0,width=520,height=570');
                 });
             }
+        }
+
+        /*
+         * Filter Work.
+         */
+        if(dom.$body.hasClass('page-template-page-work')) {
+            // init Isotope
+            var $grid = $('.grid').isotope({
+                // options
+            });
+            // filter items on button click
+            $('.filter-button-group').on( 'click', 'button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({ filter: filterValue });
+            });
         }
 
     });
