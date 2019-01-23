@@ -11,25 +11,19 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			hub_posted_on();
-			hub_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark" <?php echo has_post_thumbnail() ? 'style="background: url('. wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) .') center/cover no-repeat;"' : ''; ?> >
+			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+		</a>
 	</header><!-- .entry-header -->
-
-	<?php hub_post_thumbnail(); ?>
-
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
+	<div class="continue-reading">
+		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">read +</a>
+	</div><!-- .continue-reading -->
+
 	<footer class="entry-footer">
-		<?php hub_entry_footer(); ?>
+		<?php hub_posted_on(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

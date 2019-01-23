@@ -15,11 +15,9 @@
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 		</a>
 	</header><!-- .entry-header -->
-	<div class="entry-content">
-		<?php
-		the_excerpt();
-		?>
-	</div><!-- .entry-content -->
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 
 	<div class="continue-reading">
 		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">read +</a>
