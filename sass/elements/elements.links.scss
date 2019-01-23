@@ -1,0 +1,19 @@
+a {
+	color: $color-blue;
+	text-decoration: none;
+	transition: $transition;
+	cursor: pointer;
+
+	@include attention() {
+        color: $color-blue;
+        text-decoration: underline;
+	}
+	
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

@@ -1,0 +1,67 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    &:focus {
+		outline: none;
+	}
+}
+
+
+
+.search-form {
+    position: relative;
+    width: 200px;
+    height: 35px;
+    margin: 0 auto;
+    border: 1px solid $color-blue;
+    .search-field {
+        width: calc(100% - 40px);
+        height: 100%;
+        padding: 0 10px;
+        border: 0;
+        display: block;
+    }
+    .search-submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 100%;
+        padding: 0;
+        border: 0;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: lighten($color-gray, 60%);
+        font-style: italic;
+        font-family: $font-ui;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: lighten($color-gray, 60%);
+        font-style: italic;
+        font-family: $font-ui;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: lighten($color-gray, 60%);
+        font-style: italic;
+        font-family: $font-ui;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: lighten($color-gray, 60%);
+        font-style: italic;
+        font-family: $font-ui;
+    }
+}

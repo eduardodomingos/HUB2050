@@ -688,6 +688,26 @@ strong, b {
 	font-weight: 700;
 }
 
+a {
+	color: #2647E2;
+	text-decoration: none;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+a:hover, a:active, a:focus {
+	color: #2647E2;
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
 /**
  * 1. Setting `vertical-align` removes the whitespace that appears under `img`
  *    elements when they are dropped into a page as-is. Safer alternative to
@@ -2411,6 +2431,192 @@ button:hover, button:active, button:focus {
 	display: block;
 	max-width: 400px;
 	margin: 0 auto;
+}
+
+.blog .blog-wrapper {
+	padding-top: 96px;
+}
+
+.blog .blog-header {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.blog .blog-title {
+	text-transform: uppercase;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+.blog .blog-subtitle {
+	font-weight: 300;
+	font-style: italic;
+	margin-bottom: 24px;
+}
+
+.blog .post {
+	margin-bottom: 24px;
+}
+
+.blog .entry-header {
+	background-color: #000;
+	margin-bottom: 12px;
+}
+
+.blog .entry-header a {
+	position: relative;
+	color: #fff;
+}
+
+.blog .entry-header img {
+	border: 1px solid #b3b3b3;
+}
+
+.blog .entry-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-style: italic;
+}
+
+.blog .entry-summary {
+	font-family: "Raleway", sans-serif;
+	margin-bottom: 6px;
+	font-size: 15px;
+}
+
+.blog .entry-summary > *:last-child {
+	margin-bottom: 0;
+}
+
+.blog .entry-footer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+.blog .posted-on {
+	color: #2647E2;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.blog .continue-reading {
+	font-weight: 700;
+	font-style: italic;
+	font-style: 13px;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.posts-pagination-wrapper {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	margin-top: 48px;
+}
+
+.pagination .page-numbers {
+	display: inline-block;
+	border: 1px solid;
+	border-color: #dae0fa;
+	line-height: 1;
+	padding: 10px 15px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: inherit;
+	text-decoration: none;
+}
+
+.pagination .page-numbers:hover, .pagination .page-numbers:active, .pagination .page-numbers:focus {
+	border-color: #2647E2;
+}
+
+.pagination .page-numbers.current {
+	border-color: #2647E2;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	outline: none;
+}
+
+.search-form {
+	position: relative;
+	width: 200px;
+	height: 35px;
+	margin: 0 auto;
+	border: 1px solid #2647E2;
+}
+
+.search-form .search-field {
+	width: calc(100% - 40px);
+	height: 100%;
+	padding: 0 10px;
+	border: 0;
+	display: block;
+}
+
+.search-form .search-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 100%;
+	padding: 0;
+	border: 0;
+}
+
+.search-form ::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #cccccc;
+	font-style: italic;
+	font-family: "Oswald", sans-serif;
+}
+
+.search-form ::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #cccccc;
+	font-style: italic;
+	font-family: "Oswald", sans-serif;
+}
+
+.search-form :-ms-input-placeholder {
+	/* IE 10+ */
+	color: #cccccc;
+	font-style: italic;
+	font-family: "Oswald", sans-serif;
+}
+
+.search-form :-moz-placeholder {
+	/* Firefox 18- */
+	color: #cccccc;
+	font-style: italic;
+	font-family: "Oswald", sans-serif;
 }
 
 /* ==========================================================================

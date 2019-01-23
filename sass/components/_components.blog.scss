@@ -1,0 +1,105 @@
+.blog {
+    .blog-wrapper {
+        padding-top: $unit-huge;
+    }
+
+    .blog-header {
+        text-align: center;
+        margin-bottom: $unit-large;
+    }
+
+    .blog-title {
+        text-transform: uppercase;
+        @include font-size(45px);
+        margin-bottom: 0;
+    }
+    .blog-subtitle {
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: $unit;
+    }
+
+    .post {
+        margin-bottom: $unit;
+    }
+
+    .entry-header {
+        background-color: $color-black;
+        margin-bottom: $unit-small;
+        a {
+            position: relative;
+            color: $color-highlight;
+        }
+        img {
+            border: 1px solid lighten($color-gray, 50%);
+        }
+    }
+
+    .entry-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-style: italic;
+    }
+
+    .entry-summary {
+        font-family: $font-copy;
+        margin-bottom: $unit-tiny;
+        font-size: 15px;
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .entry-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .posted-on {
+        color: $color-blue;
+        font-style: italic;
+        font-size: 13px;
+    }
+
+    .continue-reading {
+        font-weight: 700;
+        font-style: italic;
+        font-style: 13px;
+    }
+}
+
+.updated:not(.published){
+    display: none;
+}
+
+.posts-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: $unit-large;
+}
+
+.pagination {
+	.page-numbers {
+		display: inline-block;
+		border: 1px solid;
+		border-color: lighten($color-blue, 40%);
+		line-height: 1;
+		padding: 10px 15px;
+		font-size: 14px;
+		cursor: pointer;
+		transition: $transition;
+        color: inherit;
+        text-decoration: none;
+		
+		@include attention() {
+			border-color: $color-blue;
+		}
+		
+		&.current {
+			border-color: $color-blue;
+		}
+	}
+}

@@ -56,3 +56,11 @@ function hub_excerpt_more( $more ) {
 	return "…";
 }
 add_filter( 'excerpt_more', 'hub_excerpt_more' );
+
+/**
+ * Filter the except length to 20 words.
+ */
+function hub_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'hub_excerpt_length', 999 );

@@ -25,9 +25,8 @@ if ( ! function_exists( 'hub_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'hub' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<span class="screen-reader-text">Posted on</span> %s',
+			$time_string
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.

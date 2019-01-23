@@ -42,6 +42,7 @@ if ( ! function_exists( 'hub_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'hub-fullbleed', 2000, 1200, true );
+		add_image_size( 'hub-thumbnail', 400, 267, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
