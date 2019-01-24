@@ -16,8 +16,8 @@ get_header();
 		<?php get_template_part( 'template-parts/content', 'hero-search' ); ?>
 		<div class="search-wrapper is-top-slanted is-top-slanted--green">
 			<header class="page-header">
-					<h1 class="page-title">New Search</h1>
-					<?php get_search_form(); ?>
+				<h1 class="page-title">New Search</h1>
+				<?php get_search_form(); ?>
 			</header><!-- .page-header -->
 		<?php if ( have_posts() ) : ?>
 
@@ -45,9 +45,9 @@ get_header();
 			endwhile;
 			?>
 			</div><!-- .row -->
-			<div class="posts-navigation-wrapper">
-				<?php the_posts_navigation(); ?>
-				</div><!-- .posts-pagination-wrapper -->
+			<div class="posts-pagination-wrapper">
+				<?php the_posts_pagination(); ?>
+			</div><!-- .posts-pagination-wrapper -->
 			</div><!-- .container -->
 			<?php
 		else :
