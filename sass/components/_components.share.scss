@@ -1,0 +1,26 @@
+.share-this {
+    display: flex;
+    .label {
+        font-size: 14px;
+        font-style: italic;
+        line-height: 25px;
+    }
+    .social-links-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        margin-left: $unit-tiny;
+        padding: 0;
+        a {
+            display: inline-block;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            color: $color-black;
+            @include attention() {
+                text-decoration: underline;
+            }
+        }
+    }
+}

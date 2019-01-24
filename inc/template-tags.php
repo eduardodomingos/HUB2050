@@ -176,7 +176,7 @@ if ( ! function_exists( 'hub_share_this' ) ) :
 		$title = urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'));
 		?>
 		<div class="share-this">
-			<span class="label"><?php echo hub_get_svg( array( 'icon' => 'sharing' )); ?> Partilhe</span>
+			<span class="label"><?php echo hub_get_svg( array( 'icon' => 'sharing' )); ?> share this</span>
 			<ul class="social-links-list">
 				<li class="facebook">
 					<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" title="Share on Facebook">

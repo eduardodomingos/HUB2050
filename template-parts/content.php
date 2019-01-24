@@ -11,10 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<a href="<?php esc_url( the_permalink() ); ?>" rel="bookmark">
-			
+		<?php $categories = get_the_category(); ?>
+		<a href="<?php echo esc_url( get_permalink() ) ?>">
 			<?php the_post_thumbnail( 'hub-thumbnail', ['style' => 'opacity:'. (get_field('thumbnails_opacity', 'option') / 100) .';'] );?>
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<span class="entry-category"><?php echo $categories[0]->name; ?></span>
 		</a>
 	</header><!-- .entry-header -->
 	

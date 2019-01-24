@@ -16,10 +16,9 @@ get_header();
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
 		<?php get_template_part( 'template-parts/content', 'hero-blog' ); ?>
 		<div class="blog-wrapper is-top-slanted is-top-slanted--green">
-			<header class="blog-header container">
+			<header class="blog-header">
 				<h1 class="blog-title"><?php single_post_title(); ?></h1>
 				
 				<?php if( get_field('page_subtitle', get_option('page_for_posts')) ): ?>
@@ -27,7 +26,7 @@ get_header();
 				<?php endif;?>
 
 				<?php get_search_form(); ?>
-			</header>
+			</header><!-- .blog-header -->
 		<?php
 		if ( have_posts() ) :
 			?>
@@ -66,10 +65,8 @@ get_header();
 		endif;
 		?>
 		</div><!-- .blog-wrapper -->
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_sidebar();
 get_footer();

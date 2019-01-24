@@ -12,17 +12,18 @@
 	<header class="entry-header">
 		<?php hub_posted_in(); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				hub_posted_on();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+
+	<?php
+	if ( 'post' === get_post_type() ) :
+		?>
+		<div class="entry-meta container">
+			<?php
+			hub_posted_on();
+			?>
+		</div><!-- .entry-meta -->
+	<?php endif; ?>
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -45,8 +46,21 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php //hub_entry_footer(); ?>
-		<?php hub_share_this(); ?> 	
+	<footer class="entry-footer container">
+		<div class="back-to-menu">
+			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>'">Back to Menu</a>
+		</div>
+		<?php hub_share_this(); ?>
+		<?php
+			// Previous/next post navigation.
+			$next_post = get_next_post();
+			$previous_post = get_previous_post();
+			the_post_navigation( array(
+				'next_text' => '<span class="meta-nav" aria-hidden="true">+ next</span> ' .
+					'<span class="screen-reader-text">Next article: %title</span>',
+				'prev_text' => '<span class="meta-nav" aria-hidden="true">- previous</span> ' .
+					'<span class="screen-reader-text">Previous article: %title</span>'
+			) );
+		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -2453,46 +2453,71 @@ button:hover, button:active, button:focus {
 .blog .blog-subtitle {
 	font-weight: 300;
 	font-style: italic;
-	margin-bottom: 24px;
+}
+
+.blog .search-form {
+	margin-top: 24px;
 }
 
 .blog .post {
 	margin-bottom: 24px;
 }
 
-.blog .entry-header {
-	background-color: #000;
+.blog .post .entry-header {
 	margin-bottom: 12px;
+	text-align: center;
 }
 
-.blog .entry-header a {
+.blog .post .entry-header a {
+	display: block;
 	position: relative;
 	color: #fff;
+	background-color: #000;
 }
 
-.blog .entry-header img {
-	border: 1px solid #b3b3b3;
+.blog .post .entry-header a:hover {
+	background-color: #018863;
 }
 
-.blog .entry-title {
+.blog .post .entry-header a:hover .entry-category {
+	opacity: 1;
+}
+
+.blog .post .entry-header a:hover .entry-title {
+	opacity: 0;
+}
+
+.blog .post .entry-header img {
+	border: 1px solid white;
+}
+
+.blog .post .entry-category,
+.blog .post .entry-title {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-style: italic;
+	font-size: 28px;
+	font-weight: bold;
+	transition: opacity .5s;
 }
 
-.blog .entry-summary {
+.blog .post .entry-category {
+	opacity: 0;
+}
+
+.blog .post .entry-summary {
 	font-family: "Raleway", sans-serif;
 	margin-bottom: 6px;
 	font-size: 15px;
 }
 
-.blog .entry-summary > *:last-child {
+.blog .post .entry-summary > *:last-child {
 	margin-bottom: 0;
 }
 
-.blog .entry-footer {
+.blog .post .entry-footer {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: justify;
@@ -2501,13 +2526,13 @@ button:hover, button:active, button:focus {
 	    align-items: center;
 }
 
-.blog .posted-on {
+.blog .post .posted-on {
 	color: #2647E2;
 	font-style: italic;
 	font-size: 13px;
 }
 
-.blog .continue-reading {
+.blog .post .continue-reading {
 	font-weight: 700;
 	font-style: italic;
 	font-style: 13px;
@@ -2515,6 +2540,78 @@ button:hover, button:active, button:focus {
 
 .updated:not(.published) {
 	display: none;
+}
+
+.single .single-wrapper {
+	padding-top: 96px;
+}
+
+.single .search-form {
+	margin-bottom: 48px;
+}
+
+.single .posted-on {
+	color: #2647E2;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.single .post .entry-header {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.single .post .cat-links {
+	text-transform: uppercase;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	line-height: 1.2;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.single .post .cat-links a {
+	color: #000;
+}
+
+.single .post .entry-title {
+	font-weight: 300;
+	font-style: italic;
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.28571;
+}
+
+.single .post .entry-content {
+	font-family: "Raleway", sans-serif;
+}
+
+.single .post .entry-footer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
+	margin-top: 48px;
+	margin-bottom: 48px;
+}
+
+.single .post .entry-footer .post-navigation,
+.single .post .entry-footer .back-to-menu {
+	font-size: 15px;
+}
+
+.single .post .entry-footer .post-navigation a,
+.single .post .entry-footer .back-to-menu a {
+	color: #000;
+}
+
+.single .post .entry-footer .post-navigation a:hover, .single .post .entry-footer .post-navigation a:active, .single .post .entry-footer .post-navigation a:focus,
+.single .post .entry-footer .back-to-menu a:hover,
+.single .post .entry-footer .back-to-menu a:active,
+.single .post .entry-footer .back-to-menu a:focus {
+	text-shadow: 1px 0 0 currentColor;
 }
 
 .posts-pagination-wrapper {
@@ -2544,6 +2641,20 @@ button:hover, button:active, button:focus {
 
 .pagination .page-numbers.current {
 	border-color: #2647E2;
+}
+
+.post-navigation .nav-links {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.post-navigation .nav-links > div + div {
+	margin-left: 10px;
+}
+
+.post-navigation .nav-links > div + div:before {
+	content: '/';
+	margin-right: 10px;
 }
 
 input[type="text"]:focus,
@@ -2617,6 +2728,39 @@ textarea:focus {
 	color: #cccccc;
 	font-style: italic;
 	font-family: "Oswald", sans-serif;
+}
+
+.share-this {
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.share-this .label {
+	font-size: 14px;
+	font-style: italic;
+	line-height: 25px;
+}
+
+.share-this .social-links-list {
+	list-style: none;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0;
+	margin-left: 6px;
+	padding: 0;
+}
+
+.share-this .social-links-list a {
+	display: inline-block;
+	text-align: center;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	color: #000;
+}
+
+.share-this .social-links-list a:hover, .share-this .social-links-list a:active, .share-this .social-links-list a:focus {
+	text-decoration: underline;
 }
 
 /* ==========================================================================
