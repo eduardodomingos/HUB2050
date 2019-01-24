@@ -20,22 +20,24 @@
             margin-bottom: $unit-large;
         }
 
-        .cat-links {
+        .entry-title {
             text-transform: uppercase;
             @include font-size(45px);
             margin-bottom: 0;
-            font-weight: bold;
-            a {
-                color: $color-black;
-            }
         }
 
-        .entry-title {
+        .cat-links {
             font-weight: 300;
             font-style: italic;
             font-size: 28px;
             font-size: 1.75rem;
             line-height: 1.28571;
+            a {
+                color: $color-black;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
 
         .entry-content {

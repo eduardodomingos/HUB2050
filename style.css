@@ -2561,25 +2561,28 @@ button:hover, button:active, button:focus {
 	margin-bottom: 48px;
 }
 
-.single .post .cat-links {
+.single .post .entry-title {
 	text-transform: uppercase;
 	font-size: 45px;
 	font-size: 2.8125rem;
 	line-height: 1.2;
 	margin-bottom: 0;
-	font-weight: bold;
+}
+
+.single .post .cat-links {
+	font-weight: 300;
+	font-style: italic;
+	font-size: 28px;
+	font-size: 1.75rem;
+	line-height: 1.28571;
 }
 
 .single .post .cat-links a {
 	color: #000;
 }
 
-.single .post .entry-title {
-	font-weight: 300;
-	font-style: italic;
-	font-size: 28px;
-	font-size: 1.75rem;
-	line-height: 1.28571;
+.single .post .cat-links a:hover {
+	text-decoration: underline;
 }
 
 .single .post .entry-content {
