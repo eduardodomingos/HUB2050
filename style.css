@@ -2459,40 +2459,40 @@ button:hover, button:active, button:focus {
 	margin-top: 24px;
 }
 
-.blog .post {
+.blog .hentry {
 	margin-bottom: 24px;
 }
 
-.blog .post .entry-header {
+.blog .hentry .entry-header {
 	margin-bottom: 12px;
 	text-align: center;
 }
 
-.blog .post .entry-header a {
+.blog .hentry .entry-header a {
 	display: block;
 	position: relative;
 	color: #fff;
 	background-color: #000;
 }
 
-.blog .post .entry-header a:hover {
+.blog .hentry .entry-header a:hover {
 	background-color: #018863;
 }
 
-.blog .post .entry-header a:hover .entry-category {
+.blog .hentry .entry-header a:hover .entry-category {
 	opacity: 1;
 }
 
-.blog .post .entry-header a:hover .entry-title {
+.blog .hentry .entry-header a:hover .entry-title {
 	opacity: 0;
 }
 
-.blog .post .entry-header img {
+.blog .hentry .entry-header img {
 	border: 1px solid white;
 }
 
-.blog .post .entry-category,
-.blog .post .entry-title {
+.blog .hentry .entry-category,
+.blog .hentry .entry-title {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2501,23 +2501,24 @@ button:hover, button:active, button:focus {
 	font-size: 28px;
 	font-weight: bold;
 	transition: opacity .5s;
+	line-height: 1.1;
 }
 
-.blog .post .entry-category {
+.blog .hentry .entry-category {
 	opacity: 0;
 }
 
-.blog .post .entry-summary {
+.blog .hentry .entry-summary {
 	font-family: "Raleway", sans-serif;
 	margin-bottom: 6px;
 	font-size: 15px;
 }
 
-.blog .post .entry-summary > *:last-child {
+.blog .hentry .entry-summary > *:last-child {
 	margin-bottom: 0;
 }
 
-.blog .post .entry-footer {
+.blog .hentry .entry-footer {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: justify;
@@ -2526,13 +2527,13 @@ button:hover, button:active, button:focus {
 	    align-items: center;
 }
 
-.blog .post .posted-on {
+.blog .hentry .posted-on {
 	color: #2647E2;
 	font-style: italic;
 	font-size: 13px;
 }
 
-.blog .post .continue-reading {
+.blog .hentry .continue-reading {
 	font-weight: 700;
 	font-style: italic;
 	font-style: 13px;
@@ -2764,6 +2765,107 @@ textarea:focus {
 
 .share-this .social-links-list a:hover, .share-this .social-links-list a:active, .share-this .social-links-list a:focus {
 	text-decoration: underline;
+}
+
+.search-results .search-wrapper {
+	padding-top: 96px;
+}
+
+.search-results .page-header {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.search-results .page-title {
+	text-transform: uppercase;
+	font-size: 45px;
+	font-size: 2.8125rem;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+
+.search-results .search-form {
+	margin-top: 24px;
+}
+
+.search-results .hentry {
+	margin-bottom: 24px;
+}
+
+.search-results .hentry .entry-header {
+	margin-bottom: 12px;
+	text-align: center;
+}
+
+.search-results .hentry .entry-header a {
+	display: block;
+	position: relative;
+	color: #fff;
+	background-color: #000;
+}
+
+.search-results .hentry .entry-header a:hover {
+	background-color: #018863;
+}
+
+.search-results .hentry .entry-header a:hover .entry-category {
+	opacity: 1;
+}
+
+.search-results .hentry .entry-header a:hover .entry-title {
+	opacity: 0;
+}
+
+.search-results .hentry .entry-header img {
+	border: 1px solid white;
+}
+
+.search-results .hentry .entry-category,
+.search-results .hentry .entry-title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-style: italic;
+	font-size: 28px;
+	font-weight: bold;
+	transition: opacity .5s;
+	line-height: 1.1;
+}
+
+.search-results .hentry .entry-category {
+	opacity: 0;
+}
+
+.search-results .hentry .entry-summary {
+	font-family: "Raleway", sans-serif;
+	margin-bottom: 6px;
+	font-size: 15px;
+}
+
+.search-results .hentry .entry-summary > *:last-child {
+	margin-bottom: 0;
+}
+
+.search-results .hentry .entry-footer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	    justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
+.search-results .hentry .posted-on {
+	color: #2647E2;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.search-results .hentry .continue-reading {
+	font-weight: 700;
+	font-style: italic;
+	font-style: 13px;
 }
 
 /* ==========================================================================

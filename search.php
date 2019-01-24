@@ -14,14 +14,15 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php get_template_part( 'template-parts/content', 'hero-search' ); ?>
-
-
+		<div class="search-wrapper is-top-slanted is-top-slanted--green">
+			<header class="page-header">
+					<h1 class="page-title">New Search</h1>
+					<?php get_search_form(); ?>
+			</header><!-- .page-header -->
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">New Search</h1>
-				<?php get_search_form(); ?>
-			</header><!-- .page-header -->
+		<div class="container">
+				<div class="row">
 
 			<?php
 			/* Start the Loop */
@@ -33,19 +34,29 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				?>
+				<div class="col-sm-6 col-md-4 col-xs-12">
+				<?php
+				get_template_part( 'template-parts/content');
+				?>
+				</div><!-- .col -->
+				<?php
 
 			endwhile;
-
-			the_posts_navigation();
-
+			?>
+			</div><!-- .row -->
+			<div class="posts-navigation-wrapper">
+				<?php the_posts_navigation(); ?>
+				</div><!-- .posts-pagination-wrapper -->
+			</div><!-- .container -->
+			<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
-
+		</div><!-- .search-wrapper -->
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

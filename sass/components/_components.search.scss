@@ -1,23 +1,17 @@
-
-.blog {
-    .blog-wrapper {
+.search-results {
+    .search-wrapper {
         padding-top: $unit-huge;
     }
 
-    .blog-header {
+    .page-header {
         text-align: center;
         margin-bottom: $unit-large;
     }
 
-    .blog-title {
+    .page-title {
         text-transform: uppercase;
         @include font-size(45px);
         margin-bottom: 0;
-    }
-
-    .blog-subtitle {
-        font-weight: 300;
-        font-style: italic;
     }
 
     .search-form {
@@ -97,8 +91,4 @@
             font-style: 13px;
         }
     }
-}
-
-.updated:not(.published){
-    display: none;
 }
