@@ -20,33 +20,49 @@ get_header();
 
 			<?php get_template_part( 'template-parts/content', 'hero-page' ); ?>
 
+			<div class="work-wrapper is-top-slanted is-top-slanted--green">
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php if( get_field('page_subtitle') ): ?>
+						<h2 class="entry-subtitle"><?php echo get_field('page_subtitle'); ?></h2>
+					<?php endif;?>
+				</header><!-- .entry-header -->
+				<div class="container">
 			<?php 
 			$terms = get_terms( array(
 				'taxonomy' => 'area',
 				'hide_empty' => false,
 			) );
 			if  ($terms) : ?>
-			<div class="button-group filter-button-group">
-				<button data-filter="*">show all</button>
-				<?php foreach($terms as $term) : ?>
-				<button data-filter=".<?php echo str_replace(' ', '-', strtolower($term->name)) ?>"><?php echo $term->name; ?></button>
-				<?php endforeach; ?>
+			<div class="filter-button-group-wrapper">
+				<ul class="button-group filter-button-group">
+					<li class="is-active"><button data-filter="*">Show All</button></li>
+					<?php foreach($terms as $term) : ?>
+					<li><button data-filter=".<?php echo str_replace(' ', '-', strtolower($term->name)) ?>"><?php echo $term->name; ?></button></li>
+					<?php endforeach; ?>
+				</ul>
 			</div>
 			<?php  endif;?>
 
 			<?php 
 			$posts = get_field('works', 'option');
 			if( $posts ): ?>
-				<div class="grid">
-				<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
-					<?php setup_postdata($post); ?>
-					<?php $term_list = wp_get_post_terms($post->ID, 'area', array("fields" => "names")); ?>
+				<div class="container">
+					<div class="row works">
+						<?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+							<?php setup_postdata($post); ?>
+							<?php $term_list = wp_get_post_terms($post->ID, 'area', array("fields" => "names")); ?>
+							<div class="col-md-4 col-sm-6 col-xs-12 <?php echo str_replace(' ', '-', strtolower($term_list[0])) ?>">
+								<?php
+								get_template_part( 'template-parts/content', get_post_type() );
+								?>
+							</div><!-- col -->
+							
+						<?php endforeach; ?>
+					</div><!-- .row -->
+					<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
-					<a class="<?php echo str_replace(' ', '-', strtolower($term_list[0])) ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					
-				<?php endforeach; ?>
-				</div>
-				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+				</div><!-- .container -->
 			<?php endif; ?>
 
 			<?php 
@@ -64,8 +80,8 @@ get_header();
 				</div>
 				<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 			<?php endif; ?>
-
-
+				</div><!-- .container -->
+			</div><!-- .work-wrapper -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

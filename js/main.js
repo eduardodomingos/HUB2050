@@ -79,11 +79,14 @@
          */
         if(dom.$body.hasClass('page-template-page-work')) {
             // init Isotope
-            var $grid = $('.grid').isotope({
+            var $grid = $('.works').isotope({
                 // options
             });
             // filter items on button click
             $('.filter-button-group').on( 'click', 'button', function() {
+                $('.filter-button-group li').removeClass('is-active');
+                $(".filter-button-group button[data-filter='" + $(this).data("filter") +"']").parent().addClass('is-active');
+                //setActiveItem();
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({ filter: filterValue });
             });

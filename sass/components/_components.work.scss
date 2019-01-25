@@ -1,0 +1,120 @@
+
+.page-template-page-work {
+    .work-wrapper {
+        padding-top: $unit-huge;
+    }
+
+    .filter-button-group-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: $unit-large;
+    }
+
+    .filter-button-group {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            @include attention() {
+                button {
+                    color: $color-green;
+                }
+            }
+            &.is-active {
+                button {
+                    color: $color-green;
+                }
+            }
+        }
+        > li + li {
+            margin-left: $unit-tiny;
+            &:before {
+                content: "/";
+                margin-right: $unit-tiny;
+            }
+        }
+
+        button {
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+    }
+
+
+    .hentry {
+        margin-bottom: $unit;
+        padding-top: 0;
+
+        .entry-header {
+            margin-bottom: $unit-small;
+            text-align: center;
+
+            a {
+                display: block;
+                position: relative;
+                color: $color-highlight;
+                background-color: $color-black;
+                &:hover {
+                    background-color: darken($color-green, 40%);
+                    .entry-category {
+                        opacity: 1;
+                    }
+
+                    .entry-title {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            img {
+                border: 1px solid lighten($color-gray, 90%);
+            }
+        }
+
+        .entry-category,
+        .entry-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-style: italic;
+            font-size: 28px;
+            font-weight: bold;
+            transition: opacity .5s;
+            line-height: 1.1;
+        }
+
+        .entry-category {
+            opacity: 0;
+        }
+
+        .entry-summary {
+            font-family: $font-copy;
+            margin-bottom: $unit-tiny;
+            font-size: 15px;
+            > *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .entry-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .posted-on {
+            color: $color-blue;
+            font-style: italic;
+            font-size: 13px;
+        }
+    
+        .continue-reading {
+            font-weight: 700;
+            font-style: italic;
+            font-style: 13px;
+        }
+    }
+}
