@@ -688,6 +688,16 @@ strong, b {
 	font-weight: 700;
 }
 
+blockquote {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+blockquote em {
+	font-weight: normal;
+	font-size: 80%;
+}
+
 a {
 	color: #2647E2;
 	text-decoration: none;
@@ -2543,26 +2553,35 @@ button:hover, button:active, button:focus {
 	display: none;
 }
 
-.single .single-wrapper {
-	padding-top: 96px;
+.single .single-wrapper,
+.single-work .single-wrapper {
+	padding-top: 144px;
 }
 
-.single .search-form {
+.single .search-form,
+.single-work .search-form {
 	margin-bottom: 48px;
 }
 
-.single .posted-on {
+.single .posted-on,
+.single-work .posted-on {
 	color: #2647E2;
 	font-style: italic;
 	font-size: 13px;
 }
 
-.single .post .entry-header {
+.single .work .entry-header,
+.single .post .entry-header,
+.single-work .work .entry-header,
+.single-work .post .entry-header {
 	text-align: center;
 	margin-bottom: 48px;
 }
 
-.single .post .entry-title {
+.single .work .entry-title,
+.single .post .entry-title,
+.single-work .work .entry-title,
+.single-work .post .entry-title {
 	text-transform: uppercase;
 	font-size: 45px;
 	font-size: 2.8125rem;
@@ -2570,7 +2589,14 @@ button:hover, button:active, button:focus {
 	margin-bottom: 0;
 }
 
-.single .post .cat-links {
+.single .work .tagline,
+.single .work .cat-links,
+.single .post .tagline,
+.single .post .cat-links,
+.single-work .work .tagline,
+.single-work .work .cat-links,
+.single-work .post .tagline,
+.single-work .post .cat-links {
 	font-weight: 300;
 	font-style: italic;
 	font-size: 28px;
@@ -2578,19 +2604,39 @@ button:hover, button:active, button:focus {
 	line-height: 1.28571;
 }
 
-.single .post .cat-links a {
+.single .work .tagline a,
+.single .work .cat-links a,
+.single .post .tagline a,
+.single .post .cat-links a,
+.single-work .work .tagline a,
+.single-work .work .cat-links a,
+.single-work .post .tagline a,
+.single-work .post .cat-links a {
 	color: #000;
 }
 
-.single .post .cat-links a:hover {
+.single .work .tagline a:hover,
+.single .work .cat-links a:hover,
+.single .post .tagline a:hover,
+.single .post .cat-links a:hover,
+.single-work .work .tagline a:hover,
+.single-work .work .cat-links a:hover,
+.single-work .post .tagline a:hover,
+.single-work .post .cat-links a:hover {
 	text-decoration: underline;
 }
 
-.single .post .entry-content {
+.single .work .entry-content,
+.single .post .entry-content,
+.single-work .work .entry-content,
+.single-work .post .entry-content {
 	font-family: "Raleway", sans-serif;
 }
 
-.single .post .entry-footer {
+.single .work .entry-footer,
+.single .post .entry-footer,
+.single-work .work .entry-footer,
+.single-work .post .entry-footer {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: justify;
@@ -2601,20 +2647,50 @@ button:hover, button:active, button:focus {
 	margin-bottom: 48px;
 }
 
+.single .work .entry-footer .post-navigation,
+.single .work .entry-footer .back-to-menu,
 .single .post .entry-footer .post-navigation,
-.single .post .entry-footer .back-to-menu {
+.single .post .entry-footer .back-to-menu,
+.single-work .work .entry-footer .post-navigation,
+.single-work .work .entry-footer .back-to-menu,
+.single-work .post .entry-footer .post-navigation,
+.single-work .post .entry-footer .back-to-menu {
 	font-size: 15px;
 }
 
+.single .work .entry-footer .post-navigation a,
+.single .work .entry-footer .back-to-menu a,
 .single .post .entry-footer .post-navigation a,
-.single .post .entry-footer .back-to-menu a {
+.single .post .entry-footer .back-to-menu a,
+.single-work .work .entry-footer .post-navigation a,
+.single-work .work .entry-footer .back-to-menu a,
+.single-work .post .entry-footer .post-navigation a,
+.single-work .post .entry-footer .back-to-menu a {
 	color: #000;
 }
 
-.single .post .entry-footer .post-navigation a:hover, .single .post .entry-footer .post-navigation a:active, .single .post .entry-footer .post-navigation a:focus,
+.single .work .entry-footer .post-navigation a:hover, .single .work .entry-footer .post-navigation a:active, .single .work .entry-footer .post-navigation a:focus,
+.single .work .entry-footer .back-to-menu a:hover,
+.single .work .entry-footer .back-to-menu a:active,
+.single .work .entry-footer .back-to-menu a:focus,
+.single .post .entry-footer .post-navigation a:hover,
+.single .post .entry-footer .post-navigation a:active,
+.single .post .entry-footer .post-navigation a:focus,
 .single .post .entry-footer .back-to-menu a:hover,
 .single .post .entry-footer .back-to-menu a:active,
-.single .post .entry-footer .back-to-menu a:focus {
+.single .post .entry-footer .back-to-menu a:focus,
+.single-work .work .entry-footer .post-navigation a:hover,
+.single-work .work .entry-footer .post-navigation a:active,
+.single-work .work .entry-footer .post-navigation a:focus,
+.single-work .work .entry-footer .back-to-menu a:hover,
+.single-work .work .entry-footer .back-to-menu a:active,
+.single-work .work .entry-footer .back-to-menu a:focus,
+.single-work .post .entry-footer .post-navigation a:hover,
+.single-work .post .entry-footer .post-navigation a:active,
+.single-work .post .entry-footer .post-navigation a:focus,
+.single-work .post .entry-footer .back-to-menu a:hover,
+.single-work .post .entry-footer .back-to-menu a:active,
+.single-work .post .entry-footer .back-to-menu a:focus {
 	text-shadow: 1px 0 0 currentColor;
 }
 
@@ -3095,6 +3171,21 @@ textarea:focus {
 	font-weight: 700;
 	font-style: italic;
 	font-style: 13px;
+}
+
+.ficha-tecnica {
+	text-align: center;
+	margin-bottom: 72px;
+	font-size: 18px;
+	letter-spacing: .2px;
+}
+
+.ficha-tecnica > span {
+	display: inline-block;
+}
+
+.ficha-tecnica > span:not(:last-child) {
+	margin-right: 8px;
 }
 
 /* ==========================================================================

@@ -1,0 +1,12 @@
+.ficha-tecnica {
+    text-align: center;
+    margin-bottom: 1.5 * $unit-large;
+    font-size: 18px;
+    letter-spacing: .2px;
+    > span {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+}

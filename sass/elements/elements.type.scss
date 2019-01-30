@@ -5,3 +5,12 @@
 strong, b {
     font-weight: 700;
 }
+
+blockquote {
+    font-size: 18px;
+    font-weight: bold;
+    em {
+        font-weight: normal;
+        font-size: 80%;
+    }
+}
