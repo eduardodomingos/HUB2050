@@ -12,6 +12,8 @@
         color: $color-blue;
         font-style: italic;
         font-size: 13px;
+        display: inline-block;
+        margin-bottom: $unit-tiny;
     }
 
     .work,
@@ -25,7 +27,7 @@
         .entry-title {
             text-transform: uppercase;
             @include font-size(45px);
-            margin-bottom: 0;
+            margin-bottom: $unit-tiny;
         }
         
         .tagline,
@@ -59,7 +61,8 @@
                 a {
                     color: $color-black;
                     @include attention() {
-                        text-shadow: 1px 0 0 currentColor;
+                        color: $color-green;
+                        //text-shadow: 1px 0 0 currentColor;
                     }
                 }
             }

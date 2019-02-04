@@ -128,6 +128,7 @@
         transition: all 300ms ease 0ms;
         transform: translateY(-100%);
         overflow: hidden;
+        opacity: 0;
 
         .main-navigation-wrapper {
             background: $color-green;
@@ -136,6 +137,7 @@
 
         .nav-open & {
             transform: translateY(0);
+            opacity: 1;
         }
 
         .logo-wrapper {

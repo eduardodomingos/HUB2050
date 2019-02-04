@@ -30,7 +30,7 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 			?>
-			<div class="container">
+			<div class="container wow fadeInUp fast">
 				<div class="row">
 			<?php
 			/* Start the Loop */

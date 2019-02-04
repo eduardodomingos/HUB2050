@@ -15,12 +15,12 @@ get_header();
 
 		<?php get_template_part( 'template-parts/content', 'hero-search' ); ?>
 		<div class="search-wrapper is-top-slanted is-top-slanted--green">
+			
+		<?php if ( have_posts() ) : ?>
 			<header class="page-header">
 				<h1 class="page-title">New Search</h1>
 				<?php get_search_form(); ?>
 			</header><!-- .page-header -->
-		<?php if ( have_posts() ) : ?>
-
 		<div class="container">
 				<div class="row">
 

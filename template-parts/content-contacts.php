@@ -21,32 +21,22 @@ if ($hero_image) :
 		$contacts_partnerships_label = get_field( 'contacts_partnerships_label' );
 		$contacts_partnerships = get_field( 'contacts_partnerships' );
 
-		if ($contacts_address) {
-			echo '<div class="contact-address">' . $contacts_address . '</div>';
-		}
-
-		if ( $contacts_phone || $contacts_email || $contacts_partnerships ) {
-			?>
-			<ul class="contact-list">
-				<?php
-				if($contacts_phone) {
-					echo '<li><a href="tel:'. str_replace(" ", "", $contacts_phone) .'">'. $contacts_phone_label  .'</a></li>';
-				}
-				if($contacts_email) {
-					echo '<li><a target="_blank" href="mailto:'. $contacts_email .'">'. $contacts_email_label .'</a></li>';
-				}
-				if($contacts_partnerships) {
-					echo '<li><a target="_blank" href="mailto:'. $contacts_partnerships .'">' . $contacts_partnerships_label . '</a></li>';
-				}
-				?>
-			</ul>
-			<?php
-		}
-
 		?>
-
+		<div class="contacts-big">
+			<?php if ($contacts_phone) { echo '<a href="tel:'. str_replace(" ", "", $contacts_phone) .'">'. $contacts_phone  .'</a>'; } ?>
+			<?php if ($contacts_phone && $contacts_email) : ?>
+			<br>
+			<?php endif; ?>
+			<?php if ($contacts_email) { echo '<a target="_blank" href="mailto:'. $contacts_email .'">'. $contacts_email .'</a>'; }?>
+		</div><!-- contacts-big -->
+		<div class="contacts-small">
+			<?php if($contacts_address) { echo $contacts_address; } ?>
+		</div><!-- contacts-small -->
 	</div><!-- contact -->
-
-
 </div><!-- .container-->
 </div><!-- .hero -->
+
+
+if($contacts_email) {
+					echo '<li><a target="_blank" href="mailto:'. $contacts_email .'">'. $contacts_email_label .'</a></li>';
+				}

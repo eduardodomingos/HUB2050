@@ -57,7 +57,7 @@
                 color: $color-highlight;
                 background-color: $color-black;
                 &:hover {
-                    background-color: darken($color-green, 40%);
+                    background-color: $color-green;
                     .entry-category {
                         opacity: 1;
                     }

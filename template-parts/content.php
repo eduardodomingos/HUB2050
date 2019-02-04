@@ -17,7 +17,7 @@
 				$categories = get_the_category();
 			}
 			else if( 'work' === get_post_type() ) {
-				$categories = get_terms('area');
+				$categories = get_the_terms($post->ID, array('area'));
 			}
 		?>
 

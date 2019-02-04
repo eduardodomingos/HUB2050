@@ -1,4 +1,5 @@
-.search-results {
+.search-results,
+.search-no-results {
     .search-wrapper {
         padding-top: $unit-huge;
     }
@@ -31,7 +32,7 @@
                 color: $color-highlight;
                 background-color: $color-black;
                 &:hover {
-                    background-color: darken($color-green, 40%);
+                    background-color: $color-green;
                     .entry-category {
                         opacity: 1;
                     }
@@ -90,5 +91,11 @@
             font-style: italic;
             font-style: 13px;
         }
+    }
+}
+
+.no-results {
+    .page-content {
+        text-align: center;
     }
 }
