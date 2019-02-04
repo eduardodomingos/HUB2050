@@ -35,8 +35,3 @@ if ($hero_image) :
 	</div><!-- contact -->
 </div><!-- .container-->
 </div><!-- .hero -->
-
-
-if($contacts_email) {
-					echo '<li><a target="_blank" href="mailto:'. $contacts_email .'">'. $contacts_email_label .'</a></li>';
-				}
