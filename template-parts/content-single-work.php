@@ -16,27 +16,23 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+	<?php if( have_rows('ficha_tecnica') ): ?>
 
-	<?php
-		$equipa = get_field_object('ficha_tecnica_equipa');
-		$investimento = get_field_object('ficha_tecnica_investimento');
-		$parceiros = get_field_object('ficha_tecnica_parceiros');
-		$duracao = get_field_object('ficha_tecnica_duracao');
-		$setor = get_field_object('ficha_tecnica_setor');
-		$areas = get_field_object('ficha_tecnica_areas');
-		$impacto = get_field_object('ficha_tecnica_impacto');
+	<p class="ficha-tecnica container">
 
-		$ficha_tecnica = [$equipa, $investimento, $parceiros, $duracao, $setor, $areas, $impacto];
-	?>
-	<?php if( $equipa['value'] || $investimento['value'] || $parceiros['value'] || $duracao['value'] || $setor['value'] || $areas['value'] || $impacto['value'] ) : ?>
-		<p class="ficha-tecnica container">
-			<?php foreach( $ficha_tecnica as $item ): ?>
-				<?php if($item['value']): ?>
-				<span><strong><?php echo $item['label']; ?>:</strong><?php echo ' ' . $item['value']; ?></span>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</p><!-- ficha-tecnica-->
-	<?php endif; ?>
+	<?php while( have_rows('ficha_tecnica') ): the_row(); 
+		$item = get_sub_field('ficha_tecnica_item');
+		?>
+		<?php echo '<span><strong>'. $item['ficha_tecnica_item_name'] . ':</strong> ' . $item['ficha_tecnica_item_value'] . '</span>'; ?>
+	<?php endwhile; ?>
+
+	</p><!-- ficha-tecnica-->
+
+<?php endif; ?>
+
+
+
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>
