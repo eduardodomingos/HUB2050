@@ -80,7 +80,7 @@
         if(dom.$body.hasClass('page-template-page-work')) {
             // init Isotope
             var $grid = $('.works').isotope({
-                // options
+                layoutMode: 'fitRows'
             });
             // filter items on button click
             $('.filter-button-group').on( 'click', 'button', function() {
